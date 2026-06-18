@@ -23,7 +23,7 @@ final class SettingsStore: ObservableObject {
     }
 
     init() {
-        let store = UserDefaults(suiteName: TaskStore.appGroup) ?? .standard
+        let store = UserDefaults.standard
         defaults = store
         remindersEnabled = store.bool(forKey: Keys.remindersEnabled)
         let minutes = store.integer(forKey: Keys.reminderMinutes)
