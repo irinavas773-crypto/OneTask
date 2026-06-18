@@ -2,7 +2,6 @@ import Foundation
 import Combine
 
 final class TaskStore: ObservableObject {
-    static let appGroup = "group.com.yourapp.onetask"
     static let storageKey = "taskQueue"
     static let completedKey = "completedTasks"
 
@@ -12,7 +11,7 @@ final class TaskStore: ObservableObject {
     private let defaults: UserDefaults
 
     init() {
-        defaults = UserDefaults(suiteName: TaskStore.appGroup) ?? .standard
+        defaults = .standard
         loadQueue()
         loadCompleted()
     }
