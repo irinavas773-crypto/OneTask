@@ -8,7 +8,6 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct Provider: TimelineProvider {
-    private static let appGroup = "group.com.yourapp.onetask"
     private static let storageKey = "taskQueue"
 
     func placeholder(in context: Context) -> SimpleEntry {
@@ -26,9 +25,9 @@ struct Provider: TimelineProvider {
     }
 
     private func loadEntry() -> SimpleEntry {
-        let defaults = UserDefaults(suiteName: Self.appGroup)
+        let defaults = UserDefaults.standard
         guard
-            let data = defaults?.data(forKey: Self.storageKey),
+            let data = defaults.data(forKey: Self.storageKey),
             let queue = try? JSONDecoder().decode(TaskQueue.self, from: data)
         else {
             return SimpleEntry(date: Date(), title: "No tasks", pendingCount: 0)
