@@ -34,4 +34,20 @@ final class NotificationService {
     func cancelReminders() {
         center.removePendingNotificationRequests(withIdentifiers: [reminderID])
     }
+
+    /// Fires a near-immediate notification (used for focus phase transitions).
+    func notifyNow(title: String, body: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = .default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger
+        )
+        center.add(request)
+    }
 }

@@ -51,15 +51,45 @@ final class TaskStore: ObservableObject {
         }
     }
 
-    func addTask(_ title: String) {
+    func addTask(_ title: String, categoryID: UUID? = nil) {
         let trimmed = title.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
-        let task = Task(title: trimmed)
+        add(Task(title: trimmed, categoryID: categoryID))
+    }
+
+    func add(_ task: Task) {
         if queue.current == nil {
             queue.current = task
         } else {
             queue.pending.append(task)
         }
+        saveQueue()
+    }
+
+    /// Applies edits to a task wherever it currently lives (current/pending/completed).
+    func update(_ task: Task) {
+        if queue.current?.id == task.id {
+            queue.current = task
+            saveQueue()
+        } else if let index = queue.pending.firstIndex(where: { $0.id == task.id }) {
+            queue.pending[index] = task
+            saveQueue()
+        } else if let index = completed.firstIndex(where: { $0.id == task.id }) {
+            completed[index] = task
+            saveCompleted()
+        }
+    }
+
+    func moveTask(from source: IndexSet, to destination: Int) {
+        queue.pending.move(fromOffsets: source, toOffset: destination)
+        saveQueue()
+    }
+
+    /// Adds elapsed focus time to the current task.
+    func addFocusToCurrent(_ seconds: TimeInterval) {
+        guard var task = queue.current else { return }
+        task.focusSeconds += seconds
+        queue.current = task
         saveQueue()
     }
 

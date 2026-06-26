@@ -22,6 +22,18 @@
 		4000000000000000000013 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000015 /* NotificationService.swift */; };
 		4000000000000000000014 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000016 /* SettingsView.swift */; };
 		4000000000000000000015 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000017 /* HistoryView.swift */; };
+		4000000000000000000020 /* Subtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000020 /* Subtask.swift */; };
+		4000000000000000000021 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000021 /* Category.swift */; };
+		4000000000000000000022 /* FocusModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000022 /* FocusModels.swift */; };
+		4000000000000000000023 /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000023 /* CategoryStore.swift */; };
+		4000000000000000000024 /* StatsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000024 /* StatsStore.swift */; };
+		4000000000000000000025 /* ThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000025 /* ThemeStore.swift */; };
+		4000000000000000000026 /* CategoryChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000026 /* CategoryChip.swift */; };
+		4000000000000000000027 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000027 /* AddTaskView.swift */; };
+		4000000000000000000028 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000028 /* TaskDetailView.swift */; };
+		4000000000000000000029 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000000000000000000029 /* StatsView.swift */; };
+		400000000000000000002A /* CategoryManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000002A /* CategoryManagerView.swift */; };
+		400000000000000000002B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300000000000000000002B /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +54,18 @@
 		3000000000000000000015 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		3000000000000000000016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3000000000000000000017 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		3000000000000000000020 /* Subtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtask.swift; sourceTree = "<group>"; };
+		3000000000000000000021 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3000000000000000000022 /* FocusModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModels.swift; sourceTree = "<group>"; };
+		3000000000000000000023 /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
+		3000000000000000000024 /* StatsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsStore.swift; sourceTree = "<group>"; };
+		3000000000000000000025 /* ThemeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStore.swift; sourceTree = "<group>"; };
+		3000000000000000000026 /* CategoryChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryChip.swift; sourceTree = "<group>"; };
+		3000000000000000000027 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		3000000000000000000028 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		3000000000000000000029 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		300000000000000000002A /* CategoryManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagerView.swift; sourceTree = "<group>"; };
+		300000000000000000002B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +106,9 @@
 			children = (
 				3000000000000000000002 /* Task.swift */,
 				3000000000000000000003 /* TaskQueue.swift */,
+				3000000000000000000020 /* Subtask.swift */,
+				3000000000000000000021 /* Category.swift */,
+				3000000000000000000022 /* FocusModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +121,9 @@
 				3000000000000000000006 /* TimerService.swift */,
 				3000000000000000000014 /* SettingsStore.swift */,
 				3000000000000000000015 /* NotificationService.swift */,
+				3000000000000000000023 /* CategoryStore.swift */,
+				3000000000000000000024 /* StatsStore.swift */,
+				3000000000000000000025 /* ThemeStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -114,6 +144,12 @@
 				300000000000000000000A /* MainView.swift */,
 				3000000000000000000016 /* SettingsView.swift */,
 				3000000000000000000017 /* HistoryView.swift */,
+				3000000000000000000026 /* CategoryChip.swift */,
+				3000000000000000000027 /* AddTaskView.swift */,
+				3000000000000000000028 /* TaskDetailView.swift */,
+				3000000000000000000029 /* StatsView.swift */,
+				300000000000000000002A /* CategoryManagerView.swift */,
+				300000000000000000002B /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +237,18 @@
 				4000000000000000000013 /* NotificationService.swift in Sources */,
 				4000000000000000000014 /* SettingsView.swift in Sources */,
 				4000000000000000000015 /* HistoryView.swift in Sources */,
+				4000000000000000000020 /* Subtask.swift in Sources */,
+				4000000000000000000021 /* Category.swift in Sources */,
+				4000000000000000000022 /* FocusModels.swift in Sources */,
+				4000000000000000000023 /* CategoryStore.swift in Sources */,
+				4000000000000000000024 /* StatsStore.swift in Sources */,
+				4000000000000000000025 /* ThemeStore.swift in Sources */,
+				4000000000000000000026 /* CategoryChip.swift in Sources */,
+				4000000000000000000027 /* AddTaskView.swift in Sources */,
+				4000000000000000000028 /* TaskDetailView.swift in Sources */,
+				4000000000000000000029 /* StatsView.swift in Sources */,
+				400000000000000000002A /* CategoryManagerView.swift in Sources */,
+				400000000000000000002B /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = OneTask.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -299,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourapp.onetask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -320,7 +368,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = OneTask.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,7 +381,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourapp.onetask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

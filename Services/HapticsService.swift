@@ -1,5 +1,6 @@
 import Foundation
 import CoreHaptics
+import UIKit
 
 final class HapticsService {
     private var engine: CHHapticEngine?
@@ -67,6 +68,15 @@ final class HapticsService {
             try player.start(atTime: CHHapticTimeImmediate)
         } catch {
             return
+        }
+    }
+
+    /// Light tap used for timer phase transitions and minor actions.
+    func playSelection() {
+        DispatchQueue.main.async {
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.prepare()
+            generator.impactOccurred()
         }
     }
 }
